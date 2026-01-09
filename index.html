@@ -1,741 +1,789 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A collection of 100% FREE professional portfolio website templates. Beautiful, responsive, and ready to use for developers, designers, and creatives." />
-    <meta property="og:title" content="OSSPH Freefolio - Free Portfolio Templates" />
-    <meta
-      property="og:description"
-      content="100% FREE Professional Portfolio Templates - No dependencies, mobile responsive, SEO friendly" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://i.postimg.cc/85rXg2LD/oss-ph-og.png" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image:alt" content="OSSPH Freefolio" />
-    <meta name="twitter:title" content="OSSPH Freefolio" />
-    <meta
-      name="twitter:description"
-      content="100% FREE Professional Portfolio Templates" />
-    <title>Freefolio - Free Portfolio Templates by OSSPH</title>
-    <link rel="shortcut icon" href="./clean/img/logo.svg" type="image/x-icon" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  </head>
-
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            'ossph-blue': '#0060a0',
-            'ossph-dark': '#004070',
-            'ossph-light': '#0080c0',
-            'ossph-pale': '#e6f2f9'
-          },
-          animation: {
-            'gradient': 'gradient 8s ease infinite',
-            'float': 'float 6s ease-in-out infinite'
-          },
-          keyframes: {
-            gradient: {
-              '0%, 100%': {
-                'background-size': '200% 200%',
-                'background-position': 'left center'
-              },
-              '50%': {
-                'background-size': '200% 200%',
-                'background-position': 'right center'
-              }
-            },
-            float: {
-              '0%, 100%': { transform: 'translateY(0px)' },
-              '50%': { transform: 'translateY(-10px)' }
-            }
-          }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mairaj Fatima - Data Analyst Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      }
-    };
-  </script>
 
-  <style>
-    .gradient-bg {
-      background: linear-gradient(135deg, #0060a0 0%, #0080c0 50%, #00a0e0 100%);
-      background-size: 200% 200%;
-      animation: gradient 10s ease infinite;
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9fafb;
+        }
 
-    .ossph-gradient {
-      background: linear-gradient(135deg, #0060a0, #0080c0);
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    .template-card {
-      transition: all 0.3s ease;
-    }
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    .template-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0, 96, 160, 0.15);
-    }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
 
-    /* Dark mode logo fix */
-    .dark .logo-invert {
-      filter: none;
-    }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #6366f1;
+        }
 
-    .logo-invert {
-      filter: brightness(0) saturate(100%) invert(32%) sepia(98%) saturate(938%) hue-rotate(166deg) brightness(95%) contrast(101%);
-    }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
 
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-    ::-webkit-scrollbar-track {
-      background: #f1f1f1;
-    }
+        .nav-links a:hover {
+            color: #6366f1;
+        }
 
-    ::-webkit-scrollbar-thumb {
-      background: #0060a0;
-      border-radius: 5px;
-    }
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
 
-    ::-webkit-scrollbar-thumb:hover {
-      background: #004070;
-    }
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
 
-    .dark ::-webkit-scrollbar-track {
-      background: #1f2937;
-    }
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease;
+        }
 
-    .dark ::-webkit-scrollbar-thumb {
-      background: #0080c0;
-    }
-  </style>
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
 
-  <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
-    <!-- Header -->
-    <header class="bg-white dark:bg-gray-900 shadow-lg border-b-2 border-ossph-blue/20 dark:border-ossph-light/20">
-      <div class="container mx-auto px-6 py-4">
-        <nav class="flex flex-wrap items-center justify-between">
-          <div class="flex items-center space-x-6">
-            <a href="https://ossph.org/" target="_blank">
-              <img class="h-10" src="./images/osslogo-text-white.png" alt="OSSPH logo" style="filter: brightness(0) saturate(100%) invert(32%) sepia(98%) saturate(938%) hue-rotate(166deg) brightness(95%) contrast(101%);" />
-            </a>
-            <div class="h-6 w-px bg-ossph-blue/30 dark:bg-ossph-light/30"></div>
-            <div>
-              <h1 class="text-2xl lg:text-3xl font-bold text-ossph-blue dark:text-ossph-light">
-                Freefolio
-              </h1>
-              <p class="text-xs text-gray-600 dark:text-gray-400">Free Portfolio Templates by OSSPH</p>
-            </div>
-          </div>
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+        }
 
-          <div class="flex items-center space-x-4">
-            <a href="https://github.com/OSSPhilippines/freefolio"
-               target="_blank"
-               class="flex items-center space-x-2 px-4 py-2 bg-ossph-blue hover:bg-ossph-dark text-white rounded-lg transition shadow-md hover:shadow-lg">
-              <i class="fab fa-github text-lg"></i>
-              <span class="hidden sm:block text-sm font-medium">Star on GitHub</span>
-            </a>
-            <button id="theme-toggle"
-                    class="p-2 bg-ossph-pale dark:bg-gray-800 rounded-lg hover:bg-ossph-blue/20 dark:hover:bg-ossph-light/20 transition">
-              <i class="fas fa-moon text-ossph-blue dark:text-ossph-light text-lg" id="theme-icon"></i>
-            </button>
-          </div>
-        </nav>
-      </div>
-    </header>
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 0.8s ease 0.4s backwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1f2937;
+        }
+
+        /* Work Experience Styles */
+        .experience-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .experience-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            border-left: 4px solid #6366f1;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .experience-header h3 {
+            font-size: 1.5rem;
+            color: #1f2937;
+            margin: 0;
+        }
+
+        .experience-company {
+            color: #6366f1;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .experience-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .experience-location,
+        .experience-duration {
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+
+        .experience-details {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+
+        .experience-details li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            position: relative;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .experience-details li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+            font-weight: bold;
+        }
+
+        /* Achievements Styles */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .achievement-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .achievement-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-card h3 {
+            font-size: 1.25rem;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-year {
+            color: #6366f1;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Certifications Styles */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .certification-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 3px solid #6366f1;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .cert-header {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .cert-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .cert-header h3 {
+            font-size: 1.2rem;
+            color: #1f2937;
+            margin-bottom: 0.25rem;
+            text-align: left;
+        }
+
+        .cert-issuer {
+            color: #6366f1;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .cert-description {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .cert-link {
+            display: inline-block;
+            color: #6366f1;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .cert-link:hover {
+            color: #4f46e5;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: #4b5563;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            padding: 8px 16px;
+            background: #e0e7ff;
+            color: #6366f1;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content h3 {
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+
+        .project-content p {
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            padding: 6px 16px;
+            background: #6366f1;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .project-link:hover {
+            background: #4f46e5;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 24px;
+            background: #f3f4f6;
+            color: #374151;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .contact-link:hover {
+            background: #e5e7eb;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Mairaj Fatima</div>
+            <ul class="nav-links">
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-ossph-pale via-white to-blue-50 dark:from-gray-800 dark:to-gray-900 py-20 relative overflow-hidden">
-      <!-- Decorative elements -->
-      <div class="absolute top-0 right-0 w-96 h-96 bg-ossph-blue/5 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 left-0 w-96 h-96 bg-ossph-light/5 rounded-full blur-3xl"></div>
-
-      <div class="container mx-auto px-6 text-center relative z-10">
-        <div class="inline-block mb-4 px-4 py-1 bg-ossph-blue/10 dark:bg-ossph-light/20 rounded-full">
-          <span class="text-ossph-blue dark:text-ossph-light font-semibold text-sm">🚀 100% Free & Open Source</span>
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="profile-container">
+                <img src="https://i.ibb.co/tMrfHSJy/profile-photo.jpg" alt="Mairaj Fatima" class="profile-image">
+            </div>
+            <h1>Hi, I'm Mairaj Fatima</h1>
+            <p>Data Analyst | Power BI & Tableau Expert | Python & SQL Specialist</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
         </div>
-        <h2 class="text-4xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
-          Beautiful Portfolio Templates
-          <span class="block text-3xl lg:text-5xl mt-2 bg-gradient-to-r from-ossph-blue to-ossph-light bg-clip-text text-transparent">
-            Built by the Community
-          </span>
-        </h2>
-        <p class="text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
-          Professional, responsive, and completely free portfolio templates.
-          No dependencies, no setup required. Just download and customize.
-        </p>
-
-        <div class="flex flex-wrap justify-center gap-3 mb-12">
-          <div class="bg-white dark:bg-gray-800 px-5 py-3 rounded-full shadow-lg flex items-center space-x-2 border border-ossph-blue/20">
-            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-              <i class="fas fa-check text-green-600 text-sm"></i>
-            </div>
-            <span class="font-medium">100% Free</span>
-          </div>
-          <div class="bg-white dark:bg-gray-800 px-5 py-3 rounded-full shadow-lg flex items-center space-x-2 border border-ossph-blue/20">
-            <div class="w-8 h-8 bg-ossph-pale rounded-full flex items-center justify-center">
-              <i class="fas fa-mobile-alt text-ossph-blue text-sm"></i>
-            </div>
-            <span class="font-medium">Mobile Ready</span>
-          </div>
-          <div class="bg-white dark:bg-gray-800 px-5 py-3 rounded-full shadow-lg flex items-center space-x-2 border border-ossph-blue/20">
-            <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
-              <i class="fas fa-rocket text-purple-600 text-sm"></i>
-            </div>
-            <span class="font-medium">Lightning Fast</span>
-          </div>
-          <div class="bg-white dark:bg-gray-800 px-5 py-3 rounded-full shadow-lg flex items-center space-x-2 border border-ossph-blue/20">
-            <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
-              <i class="fas fa-code text-orange-600 text-sm"></i>
-            </div>
-            <span class="font-medium">Easy Setup</span>
-          </div>
-        </div>
-
-        <!-- Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-ossph-blue/10 hover:border-ossph-blue/30 transition group">
-            <div class="text-4xl font-bold text-ossph-blue group-hover:scale-110 transition-transform" id="templateCount">15+</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Templates</div>
-          </div>
-          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-ossph-blue/10 hover:border-ossph-blue/30 transition group">
-            <div class="text-4xl font-bold text-ossph-blue group-hover:scale-110 transition-transform">0</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Dependencies</div>
-          </div>
-          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-ossph-blue/10 hover:border-ossph-blue/30 transition group">
-            <div class="text-4xl font-bold text-ossph-blue group-hover:scale-110 transition-transform">100%</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Free Forever</div>
-          </div>
-          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-ossph-blue/10 hover:border-ossph-blue/30 transition group">
-            <div class="text-4xl font-bold text-ossph-blue group-hover:scale-110 transition-transform">MIT</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">License</div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- Templates Gallery -->
-    <main class="py-12 bg-gray-50 dark:bg-gray-900">
-      <div class="container mx-auto px-6">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="templatesGrid">
-          <!-- Hacker Template -->
-          <div class="template-card group" data-category="dark minimal" data-aos="fade-up">
-            <a href="hacker" target="_blank" class="block">
-              <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <div class="relative overflow-hidden">
-                  <img src="./images/hacker.png" alt="Hacker Template"
-                       class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                  <div class="absolute top-4 right-4 bg-ossph-blue text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    Terminal Style
-                  </div>
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Hacker</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                    Terminal-inspired portfolio for programmers
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex space-x-2">
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Minimal</span>
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Dark</span>
+    <!-- Work Experience Section -->
+    <section id="experience" style="background: white;">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Data Analyst Intern</h3>
+                        <span class="experience-company">Intelura</span>
                     </div>
-                    <span class="text-ossph-blue dark:text-ossph-light group-hover:translate-x-1 transition-transform inline-flex items-center">
-                      View <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </span>
-                  </div>
+                    <div class="experience-meta">
+                        <span class="experience-location">📍 Kent, England (Remote)</span>
+                        <span class="experience-duration">📅 Nov 2025 – Jan 2026 (Ongoing)</span>
+                    </div>
+                    <ul class="experience-details">
+                        <li>Collected and validated 1000+ business leads weekly across 5+ client projects with 80% data accuracy through systematic validation processes</li>
+                        <li>Designed interactive Looker Studio dashboards and automated Google Sheets workflows, improving reporting efficiency by 35%</li>
+                        <li>Delivered end-to-end business intelligence services by analyzing data and presenting actionable visual insights</li>
+                    </ul>
                 </div>
-              </div>
-            </a>
-          </div>
 
-          <!-- Indify Template -->
-          <div class="template-card group" data-category="creative professional" data-aos="fade-up">
-            <a href="indify" target="_blank" class="block">
-              <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <div class="relative overflow-hidden">
-                  <img src="./images/indify.png" alt="Indify Template"
-                       class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Indify</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                    Modern and creative portfolio design
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex space-x-2">
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Creative</span>
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Modern</span>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Data Analyst Intern</h3>
+                        <span class="experience-company">Elevoo Pathways</span>
                     </div>
-                    <span class="text-ossph-blue dark:text-ossph-light group-hover:translate-x-1 transition-transform inline-flex items-center">
-                      View <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Plain Template -->
-          <div class="template-card group" data-category="minimal professional" data-aos="fade-up">
-            <a href="plain" target="_blank" class="block">
-              <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <div class="relative overflow-hidden">
-                  <img src="./images/plain.png" alt="Plain Template"
-                       class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Plain</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                    Simple and straightforward portfolio
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex space-x-2">
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Minimal</span>
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Clean</span>
+                    <div class="experience-meta">
+                        <span class="experience-location">📍 Egypt (Remote)</span>
+                        <span class="experience-duration">📅 July 2025 – Aug 2025</span>
                     </div>
-                    <span class="text-ossph-blue dark:text-ossph-light group-hover:translate-x-1 transition-transform inline-flex items-center">
-                      View <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </span>
-                  </div>
+                    <ul class="experience-details">
+                        <li>Collected and cleaned retail sales data using web scraping and Python, performing data validation to ensure accuracy</li>
+                        <li>Conducted exploratory data analysis (EDA) with Python and SQL to identify sales trends and customer patterns</li>
+                        <li>Designed interactive Excel dashboards with pivot tables and presented insights through data storytelling</li>
+                    </ul>
                 </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Clean Template -->
-          <div class="template-card group" data-category="minimal professional" data-aos="fade-up">
-            <a href="clean" target="_blank" class="block">
-              <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <div class="relative overflow-hidden">
-                  <img src="./images/clean.png" alt="Clean Template"
-                       class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Clean</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                    Minimalist design with focus on content
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex space-x-2">
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Minimal</span>
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Professional</span>
-                    </div>
-                    <span class="text-ossph-blue dark:text-ossph-light group-hover:translate-x-1 transition-transform inline-flex items-center">
-                      View <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Beginner Template -->
-          <div class="template-card group" data-category="minimal" data-aos="fade-up">
-            <a href="beginner" target="_blank" class="block">
-              <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <div class="relative overflow-hidden">
-                  <img src="./images/beginner.png" alt="Beginner Template"
-                       class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Beginner</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                    Perfect starter template for newcomers
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex space-x-2">
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Simple</span>
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Starter</span>
-                    </div>
-                    <span class="text-ossph-blue dark:text-ossph-light group-hover:translate-x-1 transition-transform inline-flex items-center">
-                      View <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Outlines Template -->
-          <div class="template-card group" data-category="creative" data-aos="fade-up">
-            <a href="outlines" target="_blank" class="block">
-              <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <div class="relative overflow-hidden">
-                  <img src="./images/outlines.png" alt="Outlines Template"
-                       class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Outlines</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                    Unique outline-based design approach
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex space-x-2">
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Creative</span>
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Unique</span>
-                    </div>
-                    <span class="text-ossph-blue dark:text-ossph-light group-hover:translate-x-1 transition-transform inline-flex items-center">
-                      View <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Simple Template -->
-          <div class="template-card group" data-category="minimal" data-aos="fade-up">
-            <a href="simple" target="_blank" class="block">
-              <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <div class="relative overflow-hidden">
-                  <img src="./images/simple.PNG" alt="Simple Template"
-                       class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Simple</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                    Straightforward and easy to use
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex space-x-2">
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Minimal</span>
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Basic</span>
-                    </div>
-                    <span class="text-ossph-blue dark:text-ossph-light group-hover:translate-x-1 transition-transform inline-flex items-center">
-                      View <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Deep Sea Template -->
-          <div class="template-card group" data-category="dark creative" data-aos="fade-up">
-            <a href="deepsea" target="_blank" class="block">
-              <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <div class="relative overflow-hidden">
-                  <img src="./images/deepsea.png" alt="Deep Sea Template"
-                       class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Deep Sea</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                    Ocean-inspired dark theme portfolio
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex space-x-2">
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Dark</span>
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Creative</span>
-                    </div>
-                    <span class="text-ossph-blue dark:text-ossph-light group-hover:translate-x-1 transition-transform inline-flex items-center">
-                      View <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Dark Hack Template -->
-          <div class="template-card group" data-category="dark minimal" data-aos="fade-up">
-            <a href="dark-hack" target="_blank" class="block">
-              <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <div class="relative overflow-hidden">
-                  <img src="./images/dark-hack.png" alt="Dark Hack Template"
-                       class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Dark Hack</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                    Dark mode hacker-style portfolio
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex space-x-2">
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Dark</span>
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Terminal</span>
-                    </div>
-                    <span class="text-ossph-blue dark:text-ossph-light group-hover:translate-x-1 transition-transform inline-flex items-center">
-                      View <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Ingólfur Template -->
-          <div class="template-card group" data-category="creative professional" data-aos="fade-up">
-            <a href="ingolfur" target="_blank" class="block">
-              <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <div class="relative overflow-hidden">
-                  <img src="./images/ingolfur.png" alt="Ingólfur Template"
-                       class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Ingólfur</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                    Nordic-inspired elegant design
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex space-x-2">
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Elegant</span>
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Nordic</span>
-                    </div>
-                    <span class="text-ossph-blue dark:text-ossph-light group-hover:translate-x-1 transition-transform inline-flex items-center">
-                      View <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Anime Template -->
-          <div class="template-card group" data-category="creative" data-aos="fade-up">
-            <a href="anime" target="_blank" class="block">
-              <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <div class="relative overflow-hidden">
-                  <img src="./images/anime.png" alt="Anime Template"
-                       class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Anime</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                    Anime-style creative portfolio
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex space-x-2">
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Creative</span>
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Fun</span>
-                    </div>
-                    <span class="text-ossph-blue dark:text-ossph-light group-hover:translate-x-1 transition-transform inline-flex items-center">
-                      View <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Easy Template -->
-          <div class="template-card group" data-category="minimal" data-aos="fade-up">
-            <a href="easy" target="_blank" class="block">
-              <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <div class="relative overflow-hidden">
-                  <img src="./images/easy.png" alt="Easy Template"
-                       class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Easy</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                    Easy to customize starter template
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex space-x-2">
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Simple</span>
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Starter</span>
-                    </div>
-                    <span class="text-ossph-blue dark:text-ossph-light group-hover:translate-x-1 transition-transform inline-flex items-center">
-                      View <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Flower Template -->
-          <div class="template-card group" data-category="creative" data-aos="fade-up">
-            <a href="flower" target="_blank" class="block">
-              <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <div class="relative overflow-hidden">
-                  <img src="./images/flower.png" alt="Flower Template"
-                       class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                  <div class="absolute top-4 right-4 bg-gradient-to-r from-pink-400 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    New
-                  </div>
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Flower</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                    Nature-inspired portfolio with animations
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex space-x-2">
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Creative</span>
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Animated</span>
-                    </div>
-                    <span class="text-ossph-blue dark:text-ossph-light group-hover:translate-x-1 transition-transform inline-flex items-center">
-                      View <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Aurora Template -->
-          <div class="template-card group" data-category="dark professional" data-aos="fade-up">
-            <a href="aurora" target="_blank" class="block">
-              <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <div class="relative overflow-hidden">
-                  <img src="./images/aurora.png" alt="Aurora Template"
-                       class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                  <div class="absolute top-4 right-4 bg-gradient-to-r from-ossph-blue to-ossph-light text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    New
-                  </div>
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Aurora</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                    Northern Lights inspired dark theme with 9+ sections
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex space-x-2">
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Dark</span>
-                      <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Professional</span>
-                    </div>
-                    <span class="text-ossph-blue dark:text-ossph-light group-hover:translate-x-1 transition-transform inline-flex items-center">
-                      View <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
+            </div>
         </div>
-      </div>
-    </main>
+    </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 gradient-bg relative overflow-hidden">
-      <!-- Decorative pattern -->
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-0 left-0 w-40 h-40 border-8 border-white rounded-full"></div>
-        <div class="absolute bottom-0 right-0 w-60 h-60 border-8 border-white rounded-full"></div>
-      </div>
-
-      <div class="container mx-auto px-6 text-center relative z-10">
-        <h2 class="text-4xl font-bold text-white mb-4">
-          Start Building Your Portfolio Today
-        </h2>
-        <p class="text-white/90 mb-10 max-w-2xl mx-auto text-lg">
-          Join the OSSPH community. Choose a template, customize it, and launch your professional portfolio in minutes.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="https://github.com/OSSPhilippines/freefolio"
-             target="_blank"
-             class="bg-white text-ossph-blue px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105 shadow-xl hover:shadow-2xl">
-            <i class="fab fa-github mr-2"></i>
-            View on GitHub
-          </a>
-          <a href="https://github.com/OSSPhilippines/freefolio/blob/main/CONTRIBUTING.md"
-             target="_blank"
-             class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-ossph-blue transition transform hover:scale-105">
-            <i class="fas fa-code-branch mr-2"></i>
-            Contribute a Template
-          </a>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate Data Analyst with a strong foundation in data visualization, statistical analysis, and business intelligence. Currently pursuing my Bachelor's degree in Information Technology at the University of Chakwal with a CGPA of 3.80/4.00.</p>
+                    <p style="margin-top: 1rem;">With hands-on experience at Intelura and Elevoo Pathways, I specialize in transforming raw data into actionable insights through interactive dashboards and comprehensive data analysis. I'm skilled in Power BI, Tableau, Python, and SQL, with a proven track record of improving reporting efficiency and delivering data-driven solutions.</p>
+                    <div class="skills">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Looker Studio</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Excel</span>
+                        <span class="skill-tag">Data Cleaning</span>
+                        <span class="skill-tag">EDA</span>
+                        <span class="skill-tag">KPI Reporting</span>
+                        <span class="skill-tag">Web Scraping</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p><strong>Education:</strong> BSc Information Technology, University of Chakwal (CGPA: 3.80/4.00)</p>
+                    <p style="margin-top: 1rem;"><strong>Experience:</strong> Data Analyst Intern at Intelura (Nov 2025 - Present) & Elevoo Pathways</p>
+                    <p style="margin-top: 1rem;"><strong>Location:</strong> Chakwal, Punjab, Pakistan</p>
+                    <p style="margin-top: 1rem;"><strong>Achievements:</strong> PMYLS Awardee 2023, Honhaar Scholarship Recipient, Meta Hacker Cup 2025 Participant (Ranked 1562nd in Round 1)</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" style="background: white;">
+        <div class="container">
+            <h2>Honors & Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <h3>Prime Minister Youth Laptop Scheme (PMYLS)</h3>
+                    <p class="achievement-year">2023</p>
+                    <p>Merit-based selection in the nationwide Prime Minister Youth Laptop Scheme, recognizing academic excellence across Pakistani universities.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🎓</div>
+                    <h3>Honhaar Scholarship</h3>
+                    <p class="achievement-year">2021 - 2025</p>
+                    <p>Recipient of the prestigious Honhaar Scholarship throughout my undergraduate degree for consistent academic performance.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">💻</div>
+                    <h3>Meta Hacker Cup 2025</h3>
+                    <p class="achievement-year">2025</p>
+                    <p>Ranked 1562nd globally in Round 1 and proceeded to Round 2, competing with thousands of programmers worldwide in Meta's prestigious coding competition.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🎯</div>
+                    <h3>Vice President - Al-Biruni Science Society</h3>
+                    <p class="achievement-year">Jan 2025 – July 2025</p>
+                    <p>Led Sci Spark 2025 university-wide STEM event with 200+ students and coordinated AI workshops, bridging academic theory with industry applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="cert-header">
+                        <div class="cert-icon">📊</div>
+                        <div>
+                            <h3>IBM Data Analyst Professional Certificate</h3>
+                            <p class="cert-issuer">IBM</p>
+                        </div>
+                    </div>
+                    <p class="cert-description">Comprehensive certification covering data analysis, visualization, Python, SQL, and statistical analysis.</p>
+                    <a href="https://drive.google.com/file/d/1kghMKoFiFOH1sgJmgV9OCGZlbHQmRyHR/view?usp=sharing" target="_blank" class="cert-link">View Certificate →</a>
+                </div>
+
+                <div class="certification-card">
+                    <div class="cert-header">
+                        <div class="cert-icon">🔍</div>
+                        <div>
+                            <h3>Data Analytics Job Simulation</h3>
+                            <p class="cert-issuer">Deloitte Australia (Forage)</p>
+                        </div>
+                    </div>
+                    <p class="cert-description">Completed forensic technology simulation analyzing gender pay gaps, building dashboards, and processing JSON data for compliance insights.</p>
+                    <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_yzfpFEpPzW92w8GcC_1752385467242_completion_certificate.pdf" target="_blank" class="cert-link">View Certificate →</a>
+                </div>
+
+                <div class="certification-card">
+                    <div class="cert-header">
+                        <div class="cert-icon">🤖</div>
+                        <div>
+                            <h3>The Internet of Agents Hackathon</h3>
+                            <p class="cert-issuer">Lablab.ai</p>
+                        </div>
+                    </div>
+                    <p class="cert-description">Participated in AI agents hackathon, building innovative solutions using cutting-edge artificial intelligence technologies.</p>
+                    <a href="https://lablab.ai/u/@mairaj/cmg2llfdb001w7d0sgdxqdo7y" target="_blank" class="cert-link">View Profile →</a>
+                </div>
+
+                <div class="certification-card">
+                    <div class="cert-header">
+                        <div class="cert-icon">🏅</div>
+                        <div>
+                            <h3>Meta Hacker Cup 2025</h3>
+                            <p class="cert-issuer">Meta (Facebook)</p>
+                        </div>
+                    </div>
+                    <p class="cert-description">Official participant certificate for competing in Meta's global competitive programming competition.</p>
+                    <a href="https://web.facebook.com/codingcompetitions/hacker-cup/2025/certificate/24771778862454613?source=facebook" target="_blank" class="cert-link">View Certificate →</a>
+                </div>
+
+                <div class="certification-card">
+                    <div class="cert-header">
+                        <div class="cert-icon">🎓</div>
+                        <div>
+                            <h3>Calico Fall 2025</h3>
+                            <p class="cert-issuer">UC Berkeley</p>
+                        </div>
+                    </div>
+                    <p class="cert-description">Participated in UC Berkeley's competitive programming contest, demonstrating algorithmic problem-solving skills.</p>
+                    <a href="https://calico.cs.berkeley.edu/certificates?contest=fa25&id=3871" target="_blank" class="cert-link">View Certificate →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" style="background: white;">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://i.ibb.co/H0p4wz6/Habitro-Project.png" alt="Habitro AI Habit Tracker" class="project-image">
+                    <div class="project-content">
+                        <h3>Habitro - AI-Driven Habit Tracking App</h3>
+                        <p>Developed an AI-based habit tracking application with behavioral insights dashboards featuring heatmaps and charts. Built with Python backend for AI logic and data processing, including comprehensive UML diagrams and wireframes.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mairajfatima" class="project-link" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://i.ibb.co/k2bdfd6d/pizza-sales-sql.jpg" alt="Pizza Sales SQL Analysis" class="project-image">
+                    <div class="project-content">
+                        <h3>Pizza Sales SQL Analysis</h3>
+                        <p>Comprehensive SQL analysis of pizza sales data including revenue trends, best-selling products, and customer behavior patterns. Performed complex queries to extract business insights and optimize sales strategies.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mairajfatima/pizza-sales-sql-analysis" class="project-link" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://i.ibb.co/QvY1yfyR/ecommerce.jpg" alt="E-commerce Power BI Dashboard" class="project-image">
+                    <div class="project-content">
+                        <h3>E-commerce Sales Dashboard (Power BI)</h3>
+                        <p>Interactive Power BI dashboard analyzing e-commerce sales performance with KPIs, trend analysis, and customer segmentation. Features dynamic filtering and drill-down capabilities for detailed insights.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mairajfatima/powerbi-ecommerce-sales-dashboard" class="project-link" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://i.ibb.co/cSD9FwNS/coffee-project.jpg" alt="Coffee Sales Dashboard" class="project-image">
+                    <div class="project-content">
+                        <h3>Coffee Sales Performance Dashboard</h3>
+                        <p>Built an interactive Excel dashboard analyzing sales trends, peak hours, and customer behavior for Maven Roasters. Utilized pivot tables, formulas, and KPIs to identify top products and revenue drivers.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mairajfatima" class="project-link" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background: white;">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <p>I'm always open to new opportunities and collaborations in data analytics and business intelligence. Feel free to reach out!</p>
+                <div class="contact-links">
+                    <a href="mailto:mairajawan111@gmail.com" class="contact-link">
+                        📧 mairajawan111@gmail.com
+                    </a>
+                    <a href="tel:+923348609079" class="contact-link">
+                        📱 03348609079
+                    </a>
+                    <a href="https://github.com/mairajfatima" target="_blank" class="contact-link">
+                        💻 GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/mairaj-fatima-62207a310/" target="_blank" class="contact-link">
+                        💼 LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-ossph-dark dark:bg-gray-950 text-white py-12">
-      <div class="container mx-auto px-6">
-        <div class="grid md:grid-cols-3 gap-8">
-          <div>
-            <div class="flex items-center space-x-3 mb-4">
-              <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
-                <i class="fas fa-code text-ossph-light"></i>
-              </div>
-              <h3 class="text-xl font-bold">Freefolio</h3>
-            </div>
-            <p class="text-gray-300">
-              100% free portfolio templates by the Open Source Software Philippines community.
-            </p>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-            <ul class="space-y-2 text-gray-300">
-              <li><a href="https://github.com/OSSPhilippines/freefolio" class="hover:text-ossph-light transition"><i class="fas fa-link text-xs mr-2"></i>GitHub Repository</a></li>
-              <li><a href="https://github.com/OSSPhilippines/freefolio/blob/main/CONTRIBUTING.md" class="hover:text-ossph-light transition"><i class="fas fa-link text-xs mr-2"></i>Contributing Guide</a></li>
-              <li><a href="https://github.com/OSSPhilippines/freefolio/blob/main/LICENSE" class="hover:text-ossph-light transition"><i class="fas fa-link text-xs mr-2"></i>MIT License</a></li>
-              <li><a href="https://ossph.org" class="hover:text-ossph-light transition"><i class="fas fa-link text-xs mr-2"></i>OSSPH Website</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
-            <div class="flex space-x-4 mb-4">
-              <a href="https://github.com/OSSPhilippines" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-ossph-light hover:text-ossph-dark transition">
-                <i class="fab fa-github text-xl"></i>
-              </a>
-              <a href="https://twitter.com/ossphilippines" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-ossph-light hover:text-ossph-dark transition">
-                <i class="fab fa-twitter text-xl"></i>
-              </a>
-            </div>
-            <p class="text-sm text-gray-400">
-              Join our community and contribute!
-            </p>
-          </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mairaj Fatima. All rights reserved.</p>
         </div>
-        <div class="border-t border-white/10 mt-8 pt-8 text-center text-gray-400">
-          <p class="flex items-center justify-center">
-            © 2024 OSSPH Freefolio. Made with <span class="text-red-500 mx-2">❤️</span> by the community.
-          </p>
-        </div>
-      </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      // Initialize AOS
-      AOS.init({
-        once: true,
-        delay: 0,
-        duration: 600
-      });
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-      // Theme Toggle
-      const themeToggle = document.getElementById('theme-toggle');
-      const themeIcon = document.getElementById('theme-icon');
+        // Add scroll animation for sections
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease';
+                }
+            });
+        }, { threshold: 0.1 });
 
-      // Check for saved theme preference or default to light
-      const currentTheme = localStorage.getItem('theme') || 'light';
-      if (currentTheme === 'dark') {
-        document.documentElement.classList.add('dark');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-      }
-
-      themeToggle.addEventListener('click', () => {
-        document.documentElement.classList.toggle('dark');
-
-        if (document.documentElement.classList.contains('dark')) {
-          themeIcon.classList.remove('fa-moon');
-          themeIcon.classList.add('fa-sun');
-          localStorage.setItem('theme', 'dark');
-        } else {
-          themeIcon.classList.remove('fa-sun');
-          themeIcon.classList.add('fa-moon');
-          localStorage.setItem('theme', 'light');
-        }
-      });
-
-      // Update template count
-      const templateCards = document.querySelectorAll('.template-card');
-      document.getElementById('templateCount').textContent = templateCards.length + '+';
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
     </script>
-  </body>
+</body>
 </html>
